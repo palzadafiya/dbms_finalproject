@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Summary
+{% endblock %}
+
+{% block main %}
+    <div class = "summary">
+        <h3>Transactions</h3>
+        {% if mapping %}
+            <ul>
+                {% for edge in mapping %}
+                    <li>{{ edge[0] }} gives {{ edge[1] }} to {{ edge[2] }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No transactions needed!</p>
+        {% endif %}
+    </div>
+{% endblock %}

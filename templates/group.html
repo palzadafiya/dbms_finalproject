@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Group
+{% endblock %}
+
+{% block main %}
+    <div class="summary"><h1>{{ group_name }}</h1></div>
+    <form action="/group" method="post">
+        <input autocomplete="off" autofocus name="expense_name" placeholder="Description" type="text">
+        <input autocomplete="off" autofocus name="expense_amount" placeholder="Amount" type="number" step="0.01">
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+    <form action="/summary" method="get">
+        <button class="btn btn-primary" type="submit">Done</button>
+    </form>
+    <div class="row">
+        {% for name in expenses_data %}
+            <div class = "expense-summary">
+                <h3>{{ name }}'s Expenses</h3>
+                <ul>
+                    {% for expense in expenses_data[name] %}
+                        <li>{{ expense }} : {{ expenses_data[name][expense] }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

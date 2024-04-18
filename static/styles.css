@@ -1,0 +1,55 @@
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+.green
+{
+    color: darkgreen;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace, sans-serif;
+    background-image: url('/static/money3.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.expense-summary{
+    margin: 0.5rem;
+    width: 30rem;
+    background-color: #FFFFFF !important;
+    opacity: 0.8;
+}
+
+.summary{
+    margin: auto;
+    width: 30rem;
+    background-color: #FFFFFF !important;
+    opacity: 0.8;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 600px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px); 
+    opacity: 0.8;
+}
